@@ -1,0 +1,38 @@
+aid: whistle
+name: Whistle
+description: >-
+  Whistle is a cross-platform HTTP and HTTPS debugging proxy tool for inspecting, modifying, and replaying network traffic.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Proxy
+  - Debugging Proxy
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/whistle/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-03-27'
+specificationVersion: '0.19'
+apis:
+  - aid: whistle:whistle
+    name: Whistle
+    description: >-
+      Whistle is a cross-platform HTTP and HTTPS debugging proxy tool for inspecting, modifying, and replaying network traffic.
+    humanURL: https://wproxy.org/whistle/
+    tags:
+      - Proxy
+      - Debugging Proxy
+    properties:
+      - type: Documentation
+        url: https://wproxy.org/whistle/
+      - type: Getting Started
+        url: https://wproxy.org/whistle/install.html
+common:
+  - type: Website
+    url: https://wproxy.org/whistle/
+  - type: Documentation
+    url: https://wproxy.org/whistle/
+  - type: GitHub Organization
+    url: https://github.com/avwo/whistle
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -5,8 +5,8 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Proxy
   - Debugging Proxy
+  - Proxy
 url: >-
   https://raw.githubusercontent.com/api-evangelist/whistle/refs/heads/main/apis.yml
 created: '2026-03-27'
@@ -19,8 +19,8 @@ apis:
       Whistle is a cross-platform HTTP and HTTPS debugging proxy tool for inspecting, modifying, and replaying network traffic.
     humanURL: https://wproxy.org/whistle/
     tags:
-      - Proxy
       - Debugging Proxy
+      - Proxy
     properties:
       - type: Documentation
         url: https://wproxy.org/whistle/

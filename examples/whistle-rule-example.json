@@ -1,0 +1,59 @@
+{
+  "title": "Whistle Rule Configuration Examples",
+  "description": "Example rule configurations for common Whistle proxy use cases.",
+  "examples": [
+    {
+      "use_case": "API Mocking",
+      "description": "Map API requests to local JSON files for offline development.",
+      "rules": [
+        "api.example.com/users file:///Users/dev/mocks/users.json",
+        "api.example.com/products file:///Users/dev/mocks/products.json"
+      ]
+    },
+    {
+      "use_case": "Redirect to Test Server",
+      "description": "Forward production API calls to a local or staging server.",
+      "rules": [
+        "www.production.com http://localhost:3000",
+        "api.production.com/v1 http://staging.internal.com/v1"
+      ]
+    },
+    {
+      "use_case": "CORS Configuration",
+      "description": "Add CORS headers to allow cross-origin requests during development.",
+      "rules": [
+        "api.example.com resCors://*"
+      ]
+    },
+    {
+      "use_case": "Request Header Injection",
+      "description": "Inject authentication headers into outgoing requests.",
+      "rules": [
+        "api.example.com reqHeaders://(Authorization: Bearer test-token-123)"
+      ]
+    },
+    {
+      "use_case": "Response Status Override",
+      "description": "Force specific HTTP status codes for testing error handling.",
+      "rules": [
+        "api.example.com/error statusCode://500",
+        "api.example.com/not-found statusCode://404"
+      ]
+    },
+    {
+      "use_case": "Network Throttling",
+      "description": "Simulate slow network conditions for testing.",
+      "rules": [
+        "*.example.com speed://20",
+        "api.example.com delay://2000"
+      ]
+    },
+    {
+      "use_case": "Remote Debugging",
+      "description": "Attach Weinre debugger to web pages for remote DOM inspection.",
+      "rules": [
+        "www.example.com weinre://debug-session-1"
+      ]
+    }
+  ]
+}

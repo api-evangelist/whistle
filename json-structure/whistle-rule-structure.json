@@ -1,0 +1,51 @@
+{
+  "title": "Whistle Rule Structure",
+  "description": "Documents the structure of Whistle proxy rule configuration.",
+  "version": "1.0.0",
+  "properties": {
+    "pattern": {
+      "type": "string",
+      "description": "URL pattern for matching requests",
+      "notes": "Supports exact match, wildcard (*), and regex (^/path/)"
+    },
+    "operation": {
+      "type": "string",
+      "description": "The transformation operation to apply",
+      "enum": [
+        "file - Map to local file",
+        "xfile - Map to file without changing Content-Type",
+        "tpl - Map to template file",
+        "http - Forward to HTTP URL",
+        "https - Forward to HTTPS URL",
+        "host - Override DNS resolution",
+        "proxy - Forward through proxy",
+        "statusCode - Return specific HTTP status code",
+        "reqHeaders - Set request headers",
+        "resHeaders - Set response headers",
+        "resCors - Set CORS response headers",
+        "log - Log request/response to console",
+        "weinre - Attach Weinre debugger",
+        "delay - Add delay to request",
+        "speed - Throttle response speed"
+      ]
+    },
+    "value": {
+      "type": "string",
+      "description": "The target value for the operation"
+    }
+  },
+  "examples": [
+    {
+      "description": "Map API to local mock file",
+      "rule": "api.example.com/users file:///path/to/users.json"
+    },
+    {
+      "description": "Forward to test server",
+      "rule": "www.example.com/api http://test.example.com/api"
+    },
+    {
+      "description": "Set CORS headers",
+      "rule": "api.example.com resCors://*"
+    }
+  ]
+}

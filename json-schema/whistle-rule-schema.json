@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/whistle/main/json-schema/whistle-rule-schema.json",
+  "title": "Whistle Rule",
+  "description": "A Whistle proxy rule that matches network requests and applies transformations.",
+  "type": "object",
+  "properties": {
+    "pattern": {
+      "type": "string",
+      "description": "The pattern to match against request URLs (supports wildcards, regex, and exact match).",
+      "examples": ["www.test.com", "^/api/", "*.example.com"]
+    },
+    "operation": {
+      "type": "string",
+      "description": "The operation to perform on matched requests.",
+      "enum": ["file", "xfile", "tpl", "http", "https", "host", "proxy", "statusCode", "reqHeaders", "resHeaders", "resCors", "log", "weinre", "delay", "speed"]
+    },
+    "value": {
+      "type": "string",
+      "description": "The value for the operation (file path, URL, status code, header value, etc.)."
+    },
+    "comment": {
+      "type": "string",
+      "description": "Optional comment describing what this rule does."
+    }
+  },
+  "required": ["pattern", "operation"],
+  "additionalProperties": false
+}

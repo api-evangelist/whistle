@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/whistle/main/json-schema/whistle-plugin-schema.json",
+  "title": "Whistle Plugin",
+  "description": "A Whistle proxy plugin definition.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The plugin name (must start with 'whistle.').",
+      "pattern": "^whistle\\..+"
+    },
+    "version": {
+      "type": "string",
+      "description": "Plugin version following semantic versioning."
+    },
+    "description": {
+      "type": "string",
+      "description": "A brief description of what the plugin does."
+    },
+    "homepage": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to plugin documentation or homepage."
+    },
+    "scripts": {
+      "type": "object",
+      "description": "Plugin lifecycle scripts.",
+      "properties": {
+        "server": {
+          "type": "string",
+          "description": "Path to the server-side plugin script."
+        },
+        "uiServer": {
+          "type": "string",
+          "description": "Path to the UI server plugin script."
+        },
+        "rules": {
+          "type": "string",
+          "description": "Path to custom rules module."
+        }
+      }
+    },
+    "engines": {
+      "type": "object",
+      "properties": {
+        "whistle": {
+          "type": "string",
+          "description": "Required Whistle version range."
+        },
+        "node": {
+          "type": "string",
+          "description": "Required Node.js version range."
+        }
+      }
+    }
+  },
+  "required": ["name", "version", "description"],
+  "additionalProperties": true
+}

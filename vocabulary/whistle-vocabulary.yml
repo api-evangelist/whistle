@@ -1,0 +1,193 @@
+vocabulary:
+  name: Whistle Proxy Vocabulary
+  description: >-
+    Vocabulary and taxonomy for Whistle, a cross-platform HTTP, HTTPS, HTTP/2,
+    WebSocket, and TCP debugging proxy tool for developers.
+  version: 1.0.0
+  created: '2026-05-03'
+  modified: '2026-05-03'
+  tags:
+    - Debugging Proxy
+    - Developer Tools
+    - Network Debugging
+    - HTTP
+    - HTTPS
+    - WebSocket
+
+terms:
+  - term: Rule
+    definition: >-
+      A pattern-operation pair that defines how Whistle should handle matching network
+      requests. Rules consist of a URL pattern and an operation to perform.
+    tags:
+      - Configuration
+      - Core Concept
+
+  - term: Pattern
+    definition: >-
+      A URL matching expression in a Whistle rule. Supports exact string match, wildcard
+      (*), regex (prefixed with ^), and domain-only matching.
+    tags:
+      - Configuration
+      - Matching
+
+  - term: Operation
+    definition: >-
+      The action Whistle performs on requests matching a rule. Examples include file
+      mapping, URL forwarding, header injection, status code overriding, and debugging.
+    tags:
+      - Configuration
+      - Core Concept
+
+  - term: Plugin
+    definition: >-
+      An npm package prefixed with "whistle." that extends Whistle's functionality with
+      custom rules, UI components, or server-side processing.
+    tags:
+      - Extensibility
+      - Plugin
+
+  - term: Composer
+    definition: >-
+      A built-in Whistle UI tool for crafting, replaying, and editing HTTP requests,
+      similar to Postman or curl in a browser-based interface.
+    tags:
+      - Developer Tools
+      - Request Replay
+
+  - term: Weinre
+    definition: >-
+      A remote web debugging tool integrated into Whistle that enables DOM inspection
+      and JavaScript console access on devices that cannot run browser DevTools.
+    tags:
+      - Debugging
+      - Remote Debugging
+
+  - term: Intercepted Request
+    definition: >-
+      An HTTP, HTTPS, HTTP/2, or WebSocket request captured by Whistle's proxy
+      for inspection and potential modification.
+    tags:
+      - Core Concept
+      - Network
+
+  - term: Values
+    definition: >-
+      Named variables stored in Whistle's configuration that can be referenced
+      across multiple rules, enabling DRY configuration patterns.
+    tags:
+      - Configuration
+      - Variables
+
+  - term: HTTPS Decryption
+    definition: >-
+      Whistle's capability to decrypt HTTPS traffic by acting as a man-in-the-middle
+      proxy with its own root certificate installed on the device.
+    tags:
+      - HTTPS
+      - Security
+      - Decryption
+
+  - term: API Mocking
+    definition: >-
+      Using Whistle's file operation to map API endpoint requests to local JSON or
+      template files, simulating API responses without a live backend.
+    tags:
+      - Development
+      - Testing
+      - API Mocking
+
+  - term: Reverse Proxy
+    definition: >-
+      A Whistle proxy mode where requests to a specific domain are forwarded to a
+      different server, commonly used for local development environment routing.
+    tags:
+      - Proxy
+      - Network
+
+  - term: Network Panel
+    definition: >-
+      The primary Whistle web UI panel showing captured network traffic, request
+      details, response content, and timing information.
+    tags:
+      - UI
+      - Monitoring
+
+  - term: CORS
+    definition: >-
+      Cross-Origin Resource Sharing. Whistle's resCors operation injects CORS
+      response headers to allow cross-origin requests during development.
+    tags:
+      - HTTP
+      - Security
+      - Development
+
+  - term: Throttling
+    definition: >-
+      Whistle's ability to simulate network speed limitations (speed operation) or
+      add artificial delays (delay operation) to test application behavior under
+      poor network conditions.
+    tags:
+      - Testing
+      - Network Simulation
+
+operations:
+  - name: file
+    description: Map a matched request URL to a local file, returning its content as the response.
+    category: Local Mapping
+
+  - name: xfile
+    description: Like file but does not alter the Content-Type header of the response.
+    category: Local Mapping
+
+  - name: tpl
+    description: Map a matched URL to a local template file with variable substitution.
+    category: Local Mapping
+
+  - name: http
+    description: Forward matched requests to an HTTP URL.
+    category: Remote Forwarding
+
+  - name: https
+    description: Forward matched requests to an HTTPS URL.
+    category: Remote Forwarding
+
+  - name: host
+    description: Override DNS resolution for a domain, routing to a specified IP or hostname.
+    category: DNS
+
+  - name: proxy
+    description: Forward matched requests through a specified HTTP or HTTPS proxy server.
+    category: Proxy
+
+  - name: statusCode
+    description: Return a specific HTTP status code for matched requests without proxying.
+    category: Response Modification
+
+  - name: reqHeaders
+    description: Inject or modify request headers for matched requests.
+    category: Header Manipulation
+
+  - name: resHeaders
+    description: Inject or modify response headers for matched responses.
+    category: Header Manipulation
+
+  - name: resCors
+    description: Add CORS response headers to matched responses.
+    category: Header Manipulation
+
+  - name: log
+    description: Log request and response details to the Whistle console panel.
+    category: Debugging
+
+  - name: weinre
+    description: Attach a Weinre debugger to matched web pages for remote DOM inspection.
+    category: Debugging
+
+  - name: delay
+    description: Add an artificial delay (in milliseconds) to matched requests.
+    category: Throttling
+
+  - name: speed
+    description: Throttle the response speed (in KB/s) for matched responses.
+    category: Throttling

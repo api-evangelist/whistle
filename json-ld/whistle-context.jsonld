@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "whistle": "https://wproxy.org/whistle/",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "version": "schema:version",
+    "SoftwareApplication": "schema:SoftwareApplication",
+    "operatingSystem": "schema:operatingSystem",
+    "softwareRequirements": "schema:softwareRequirements",
+    "applicationCategory": "schema:applicationCategory",
+    "downloadUrl": "schema:downloadUrl",
+    "pattern": {
+      "@id": "whistle:pattern",
+      "@type": "xsd:string"
+    },
+    "operation": {
+      "@id": "whistle:operation",
+      "@type": "xsd:string"
+    },
+    "rule": {
+      "@id": "whistle:rule",
+      "@type": "@id"
+    },
+    "plugin": {
+      "@id": "whistle:plugin",
+      "@type": "@id"
+    },
+    "proxy": {
+      "@id": "whistle:proxy",
+      "@type": "@id"
+    },
+    "port": {
+      "@id": "whistle:port",
+      "@type": "xsd:integer"
+    },
+    "interceptedRequest": {
+      "@id": "whistle:interceptedRequest",
+      "@type": "@id"
+    },
+    "requestHeaders": {
+      "@id": "whistle:requestHeaders",
+      "@type": "@id"
+    },
+    "responseHeaders": {
+      "@id": "whistle:responseHeaders",
+      "@type": "@id"
+    },
+    "requestBody": {
+      "@id": "whistle:requestBody",
+      "@type": "xsd:string"
+    },
+    "responseBody": {
+      "@id": "whistle:responseBody",
+      "@type": "xsd:string"
+    },
+    "statusCode": {
+      "@id": "whistle:statusCode",
+      "@type": "xsd:integer"
+    },
+    "protocol": {
+      "@id": "whistle:protocol",
+      "@type": "xsd:string"
+    },
+    "weinre": {
+      "@id": "whistle:weinre",
+      "@type": "@id"
+    },
+    "composer": {
+      "@id": "whistle:composer",
+      "@type": "@id"
+    }
+  }
+}

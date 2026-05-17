@@ -43,7 +43,7 @@ apis:
     properties:
       - type: Documentation
         url: https://wproxy.org/en/docs/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://wproxy.org/en/docs/getting-started.html
       - type: GitHub
         url: https://github.com/avwo/whistle
@@ -93,9 +93,9 @@ common:
     url: https://wproxy.org/whistle/
   - type: Documentation
     url: https://wproxy.org/en/docs/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://wproxy.org/en/docs/getting-started.html
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/avwo
   - type: GitHub
     url: https://github.com/avwo/whistle

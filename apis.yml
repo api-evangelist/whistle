@@ -89,6 +89,8 @@ apis:
       - Node.js NPM module integration
       - Desktop client via whistle-client
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/whistle-labs
   - type: Website
     url: https://wproxy.org/whistle/
   - type: Documentation

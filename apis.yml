@@ -5,7 +5,7 @@ description: >-
   built on Node.js. It enables developers to inspect, intercept, modify, and replay
   network traffic through a rule-based configuration system with a built-in web UI.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Debugging Proxy
   - Proxy

@@ -89,6 +89,8 @@ apis:
       - Node.js NPM module integration
       - Desktop client via whistle-client
 common:
+  - type: DomainSecurity
+    url: security/whistle-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/whistle-labs
   - type: Website

@@ -34,6 +34,13 @@ tags:
   - Proxy
   - Network Debugging
   - HTTP
+  - WebSocket
+  - Developer Tools
+tags_raw:
+  - Debugging Proxy
+  - Proxy
+  - Network Debugging
+  - HTTP
   - HTTPS
   - WebSocket
   - Developer Tools
@@ -54,6 +61,15 @@ apis:
     humanURL: https://wproxy.org/whistle/
     baseURL: http://localhost:8899
     tags:
+      - Debugging Proxy
+      - Proxy
+      - Network Debugging
+      - HTTP
+      - WebSocket
+      - Developer Tools
+      - API Mocking
+      - Request Replay
+    tags_raw:
       - Debugging Proxy
       - Proxy
       - Network Debugging
